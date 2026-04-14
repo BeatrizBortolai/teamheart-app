@@ -21,9 +21,11 @@ jobs:
 
       - name: Dar permissão ao mvnw
         run: chmod +x mvnw
+        working-directory: teamheart-master
 
       - name: Build e Testes
         run: ./mvnw clean verify
+        working-directory: teamheart-master
 
   deploy-staging:
     needs: build
